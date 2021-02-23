@@ -14,4 +14,4 @@ In this problem you have the following constraints:
 
 Your goal is to minimize the amount of carriers given the constraints above.
 
-The timetable of planes' arrival is in the file 'SVO_data.txt'. There is presented the distribution of containers taken by airplanes between 9:00 and 17:55.
+The timetable of planes' arrival is in the file 'SVO_timetable.txt'. There is presented the distribution of containers taken by airplanes between 9:00 and 17:55.
