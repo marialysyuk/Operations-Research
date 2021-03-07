@@ -31,12 +31,12 @@ storage as well).
    at 9:00 will be moved to temporary storage at 10:40). Then carriers redistributed from route 1 to 
    route 2 will be able to help with shipment to the terminal, thus a lower amount of new carriers will be needed. 
 
-    3.2. Second, on the first route there is an important restriction - cargo must be picked up immediately, so some carriers are forced to go half-empty.   
-         For example, if you need to pick up 5 containers, you have to take two carriers, one of which can go full, and the other one will carry only 
-         1 container out of 4. At the route temporary storage -> terminal restrictions are weaker. We can drop cargo and as the required number
-         of containers are collected, the carriers will leave full. This observation is realized in the following way. Let's say we need to remove
-         11 containers from the temporary storage no later than 10:50. 2 containers need to be taken no later than  10:40, 7 no later than 10:45. Then to avoid              sending carriers half-empty, we will add 2 containers to obtain 4 in total at 10:40 and 1 to obtain 8 in total at 10:45. Without this rebalancing, we
-         would have had to send 1 extra carrier at 10:45.
+    Second, on the first route there is an important restriction - cargo must be picked up immediately, so some carriers are forced to go half-empty.   
+    For example, if you need to pick up 5 containers, you have to take two carriers, one of which can go full, and the other one will carry only 
+    1 container out of 4. At the route temporary storage -> terminal restrictions are weaker. We can drop cargo and as the required number
+    of containers are collected, the carriers will leave full. This observation is realized in the following way. Let's say we need to remove
+    11 containers from the temporary storage no later than 10:50. 2 containers need to be taken no later than  10:40, 7 no later than 10:45. Then to avoid               sending carriers half-empty, we will add 2 containers to obtain 4 in total at 10:40 and 1 to obtain 8 in total at 10:45. Without this rebalancing, we
+    would have had to send 1 extra carrier at 10:45.
 
 Optimizations mentioned above resulted in decrease of necessary carriers from 48 (upper bound) to 38. File “SVO.ipynb” contains the presented solution.
 There are other complementary files: “SVO_first.txt” and “SVO_second.txt” which contain carriers’ distribution at route airplane -> temporary storage and
